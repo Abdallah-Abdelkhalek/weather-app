@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "part1": "Make",
+    "part2": "beautiful",
+    "part3": "websites regardless of your design experience."
+  },
+  "subtitle": "Beautiful, fast and modern React UI library.",
+  "snippet": {
+    "text": "Get started by editing",
+    "code": "app/page.tsx"
+  }
+}
