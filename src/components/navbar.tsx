@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -9,10 +8,9 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-} from '@heroui/navbar';
-import { Link } from '@heroui/link';
-import { Input } from '@heroui/input';
-import { link as linkStyles } from '@heroui/theme';
+} from '@heroui/react';
+import { Link } from '@heroui/react';
+import { link as linkStyles } from '@heroui/react';
 import NextLink from 'next/link';
 import clsx from 'clsx';
 import { siteConfig } from '@/config/site';
