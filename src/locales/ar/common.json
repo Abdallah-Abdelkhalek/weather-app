@@ -1,12 +1,26 @@
 {
-  "hero": {
-    "part1": "اصنع",
-    "part2": "جميلة",
-    "part3": "مواقع الويب بغض النظر عن خبرتك في التصميم."
-  },
-  "subtitle": "مكتبة واجهة مستخدم React جميلة وسريعة وحديثة.",
-  "snippet": {
-    "text": "ابدأ عن طريق تحرير",
-    "code": "app/page.tsx"
-  }
+  "weather_dashboard": "لوحة الطقس",
+  "search_placeholder": "ابحث عن مدينة، مثل القاهرة",
+  "search_button": "بحث",
+  "current_weather": "الطقس الحالي",
+  "temperature": "درجة الحرارة",
+  "humidity": "الرطوبة",
+  "wind_speed": "سرعة الرياح",
+  "feels_like": "يشعر كأنه",
+  "conditions": "الظروف",
+  "last_updated": "آخر تحديث",
+  "loading": "جارٍ التحميل...",
+  "no_data": "لا توجد بيانات طقس متاحة",
+  "theme_light": "الوضع الفاتح",
+  "theme_dark": "الوضع الداكن",
+  "theme_toggle": "تبديل الوضع",
+  "location_error": "حدث خطأ في السماح لمعرفه الموقع",
+  "search_city": "البحث عن مدينة",
+  "search_city_weather": "البحث عن طقس مدينة",
+  "locating": "جارٍ تحديد الموقع...",
+  "get_location": "احصل على الموقع الحالي",
+  "refresh": "تحديث",
+  "type_city": "اكتب اسم المدينة",
+  "updated": "تم التحديث",
+  "offline": "أنت الأن غير متصل بالأنترنت, بعض الخصائص لن تعمل"
 }

@@ -1,6 +1,26 @@
 {
-  "buttons": {
-    "documentation": "Documentation",
-    "github": "GitHub"
-  }
+  "weather_dashboard": "Weather Dashboard",
+  "search_placeholder": "Search city, e.g. Cairo",
+  "search_button": "Search",
+  "current_weather": "Current Weather",
+  "temperature": "Temperature",
+  "humidity": "Humidity",
+  "wind_speed": "Wind Speed",
+  "feels_like": "Feels Like",
+  "conditions": "Conditions",
+  "last_updated": "Last Updated",
+  "loading": "Loading...",
+  "no_data": "No weather data available",
+  "theme_light": "Light Mode",
+  "theme_dark": "Dark Mode",
+  "theme_toggle": "Toggle Theme",
+  "location_error": "Error providing location permission",
+  "search_city": "Search City",
+  "search_city_weather": "Search City Weather",
+  "locating": "Locating...",
+  "get_location": "Get Current Location",
+  "refresh": "Refresh",
+  "type_city": "Type a city name",
+  "updated": "Updated",
+  "offline": "You are offline, some features may not work"
 }
