@@ -3,12 +3,12 @@ import { Metadata, Viewport } from 'next';
 import { Link } from '@heroui/link';
 import { notFound } from 'next/navigation';
 import { locales, Locale } from '@/i18nConfig';
-import { Navbar } from '@/components/navbar';
+import { Navbar } from '@/components/molecules/navbar';
 import { siteConfig } from '@/config/site';
 import clsx from 'clsx';
 import initTranslations from '@/i18n/server';
 import { Inter } from 'next/font/google';
-import { Providers } from '@/components/providers';
+import { Providers } from '@/app/providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,15 +39,12 @@ export default async function RootLayout({
   children,
   params,
 }: Props) {
-  const locale = params.locale;
+  const { locale } = await params;
 
   if (!locales.includes(locale)) notFound();
 
   // Load translations server-side for 'common' and 'home'
-  const { resources } = await initTranslations(locale, [
-    'common',
-    'home',
-  ]);
+  const { resources } = await initTranslations(locale, ['common']);
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -58,30 +55,31 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-        {/* Pass locale and resources into your Providers */}
-        <Providers
-          locale={locale}
-          resources={resources}
-          themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
-        >
-          <div className="relative flex h-screen flex-col">
-            <Navbar />
-            <main className="container mx-auto max-w-7xl flex-grow px-6 pt-16">
-              {children}
-            </main>
-            <footer className="flex w-full items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://www.linkedin.com/in/abdallah-abdelkhalek/"
-                title="Weather App by Abdallah-Abdelkhalek"
-              >
-                <span className="text-default-600">Developed by</span>
-                <p className="text-primary">Abdallah</p>
-              </Link>
-            </footer>
-          </div>
-        </Providers>
+          <Providers
+            locale={locale}
+            resources={resources}
+            themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
+          >
+            <div className="relative flex h-screen flex-col">
+              <Navbar />
+              <main className="container mx-auto max-w-7xl flex-grow p-6">
+                {children}
+              </main>
+              <footer className="flex w-full items-center justify-center py-3">
+                <Link
+                  isExternal
+                  className="flex items-center gap-1 text-current"
+                  href="https://www.linkedin.com/in/abdallah-abdelkhalek/"
+                  title="Weather App by Abdallah-Abdelkhalek"
+                >
+                  <span className="text-default-600">
+                    Developed by
+                  </span>
+                  <p className="text-primary">Abdallah</p>
+                </Link>
+              </footer>
+            </div>
+          </Providers>
       </body>
     </html>
   );

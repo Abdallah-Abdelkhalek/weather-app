@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 i18n.use(initReactI18next).init({
   fallbackLng: 'en',
   lng: 'en',
-  ns: ['common', 'home'],
+  ns: ['common'],
   defaultNS: 'common',
   interpolation: { escapeValue: false },
   resources: {},
