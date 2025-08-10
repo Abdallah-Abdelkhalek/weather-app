@@ -1,5 +1,59 @@
-import { IconSvgProps } from "@/types";
-import * as React from "react";
+import { IconSvgProps } from '@/types';
+import * as React from 'react';
+
+export const FloatingBlob: React.FC<IconSvgProps> = () => {
+  return (
+    <>
+      <svg
+        className="animate-blob-slow absolute top-10 left-10 h-40 w-40 opacity-30"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="grad1"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
+            <stop offset="0%" stopColor="#22d3ee" />
+            <stop offset="100%" stopColor="#3b82f6" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#grad1)"
+          d="M40.6,-59.7C51.7,-50.3,50.3,-32.6,55.8,-16.6C61.3,-0.7,73.6,13,72,26.9C70.4,40.7,54.9,54.7,39.3,61.5C23.7,68.3,7.1,68,-9.3,69.6C-25.6,71.2,-41.6,74.7,-50.3,66.1C-59,57.5,-60.4,36.8,-59.3,19.8C-58.2,2.7,-54.7,-9,-48.2,-19.9C-41.7,-30.8,-32.3,-41,-23.8,-49.2C-15.3,-57.5,-7.7,-63.7,5.7,-67.7C19.1,-71.7,38.2,-73.2,40.6,-59.7Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+
+      <svg
+        className="animate-blob-slower absolute right-8 bottom-16 h-56 w-56 opacity-20"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="grad2"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
+            <stop offset="0%" stopColor="#fbbf24" />
+            <stop offset="100%" stopColor="#f97316" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#grad2)"
+          d="M47.3,-64.6C58.1,-54.3,56.8,-35.5,55.6,-20.5C54.4,-5.5,53.4,6.4,49.1,18.4C44.8,30.3,37.3,42.2,26.5,46.7C15.7,51.1,1.5,48.1,-10.7,44.3C-22.9,40.5,-32.8,35.9,-44.8,29.4C-56.7,22.9,-70.8,14.5,-75.7,3.8C-80.5,-6.9,-76.1,-20.2,-68.1,-31.6C-60,-43,-48.4,-52.7,-36,-60.1C-23.6,-67.5,-11.8,-72.5,2,-75.2C15.9,-77.9,31.7,-78.9,47.3,-64.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </>
+  );
+};
 
 export const GithubIcon: React.FC<IconSvgProps> = ({
   size = 24,

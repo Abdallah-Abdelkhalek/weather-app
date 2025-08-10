@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { HeroUIProvider } from '@heroui/system';
 import { makeStore, AppStore } from '../state/store';
-import TranslationsProvider from '../components/TranslationsProvider';
+import TranslationsProvider from '../components/atoms/TranslationsProvider';
 import React from 'react';
 
 
