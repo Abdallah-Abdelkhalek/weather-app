@@ -2,3 +2,24 @@
 @plugin '../../hero.ts';
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
+
+
+ @keyframes blob {
+  0%,
+  100% {
+    transform: translate(0px, 0px) rotate(30deg);
+  }
+  33% {
+    transform: translate(20px, -10px) rotate(15deg);
+  }
+  66% {
+    transform: translate(-20px, 10px) rotate(-35deg);
+  }
+}
+
+.animate-blob-slow {
+  animation: blob 10s infinite ease-in-out;
+}
+.animate-blob-slower {
+  animation: blob 15s infinite ease-in-out;
+}
