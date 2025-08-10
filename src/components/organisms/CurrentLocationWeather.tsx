@@ -185,18 +185,22 @@ export default function CurrentLocationWeather({
               className="drop-shadow-lg"
             />
             <div>
+              {/* Name and country */}
               <div className="text-lg font-semibold">
                 {weather.name}
                 {weather.country ? `, ${weather.country}` : ''}
               </div>
+              {/* temp */}
               <div className="text-3xl font-bold">
                 {weather.tempC}°C
               </div>
+              {/* weather description */}
               <div className="text-sm capitalize opacity-90">
                 {weather.description}
               </div>
             </div>
           </div>
+          {/* Timestamp */}
           <div className="mt-2 text-xs opacity-70">
             {t('updated')}{' '}
             {new Date(weather.timestamp).toLocaleString()}
@@ -204,7 +208,7 @@ export default function CurrentLocationWeather({
         </motion.div>
       ) : (
         <div className="rounded-lg border border-dashed border-white/50 p-4 text-center text-white/80">
-          {t('cityWeather.typeCity')}
+          {t('type_city')}
         </div>
       )}
     </motion.section>
