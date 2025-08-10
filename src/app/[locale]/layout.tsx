@@ -55,31 +55,29 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-          <Providers
-            locale={locale}
-            resources={resources}
-            themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
-          >
-            <div className="relative flex h-screen flex-col">
-              <Navbar />
-              <main className="container mx-auto max-w-7xl flex-grow p-6">
-                {children}
-              </main>
-              <footer className="flex w-full items-center justify-center py-3">
-                <Link
-                  isExternal
-                  className="flex items-center gap-1 text-current"
-                  href="https://www.linkedin.com/in/abdallah-abdelkhalek/"
-                  title="Weather App by Abdallah-Abdelkhalek"
-                >
-                  <span className="text-default-600">
-                    Developed by
-                  </span>
-                  <p className="text-primary">Abdallah</p>
-                </Link>
-              </footer>
-            </div>
-          </Providers>
+        <Providers
+          locale={locale}
+          resources={resources}
+          themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
+        >
+          <div className="relative flex h-screen flex-col">
+            <Navbar />
+            <main className="container mx-auto max-w-7xl flex-grow p-6">
+              {children}
+            </main>
+            <footer className="flex w-full items-center justify-center py-3">
+              <Link
+                isExternal
+                className="flex items-center gap-1 text-current"
+                href="https://www.linkedin.com/in/abdallah-abdelkhalek/"
+                title="Weather App by Abdallah-Abdelkhalek"
+              >
+                <span className="text-default-600">Developed by</span>
+                <p className="text-primary">Abdallah</p>
+              </Link>
+            </footer>
+          </div>
+        </Providers>
       </body>
     </html>
   );
